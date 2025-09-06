@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:17.6
+    container_name: bibwin_postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_DB: bibwin_db
+      POSTGRES_USER: bibwin_user
+      POSTGRES_PASSWORD: bibwin_pass
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
