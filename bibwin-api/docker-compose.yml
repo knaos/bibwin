@@ -8,7 +8,8 @@ services:
       POSTGRES_DB: bibwin_db
       POSTGRES_USER: bibwin_user
       POSTGRES_PASSWORD: bibwin_pass
-
+    ports:
+      - '5432:5432'
   adminer:
     image: adminer
     restart: always
